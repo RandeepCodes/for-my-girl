@@ -1,72 +1,57 @@
 <style>
-    /* Elegant Sage Green Gradient */
     body { 
-        background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%); 
-        background-attachment: fixed;
+        /* This uses your uploaded image and keeps it still while scrolling */
+        background: url('bg.jpg') no-repeat center center fixed; 
+        background-size: cover;
         margin: 0; 
         font-family: 'Georgia', serif; 
         overflow-x: hidden; 
-        color: #2e7d32; 
     }
 
-    /* Adding subtle "Green Flowers" via CSS shapes */
-    body::before {
-        content: "🌸 🌿 🌸 🌿";
+    /* Floating "Happy Birthday" Banner */
+    .floating-banner {
         position: fixed;
-        top: 10px;
-        left: 10px;
-        font-size: 2rem;
-        opacity: 0.3;
-        z-index: -1;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.5rem;
+        color: #2e7d32;
+        font-weight: bold;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        backdrop-filter: blur(5px); /* Blurs the background behind the text */
     }
 
     .container { 
         display: flex; 
         flex-direction: column; 
         align-items: center; 
-        padding: 20px; 
-    }
-
-    /* Birthday Header - Glassmorphism style */
-    .header-text { 
-        text-align: center; 
-        margin: 40px 0;
-        padding: 30px;
-        background: rgba(255, 255, 255, 0.8);
-        border: 2px solid #a5d6a7;
-        border-radius: 30px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        max-width: 80%;
-    }
-
-    h1 { 
-        font-size: 2.2rem; 
-        margin-bottom: 10px; 
-        color: #1b5e20;
-        letter-spacing: 1px;
+        padding: 80px 20px 20px 20px; /* Extra top padding for the banner */
     }
 
     /* Media Styling */
     video, img { 
         max-width: 85%; 
-        border: 12px solid white; /* Thick Polarod look */
-        box-shadow: 5px 15px 25px rgba(0,0,0,0.15); 
-        margin: 25px 0;
+        border: 12px solid white; 
+        box-shadow: 5px 15px 25px rgba(0,0,0,0.2); 
+        margin: 30px 0;
         display: block;
     }
 
-    /* The "Scattered Sand" Scrapbook Effect */
-    .scatter:nth-child(even) { transform: rotate(4deg) translateX(10px); }
-    .scatter:nth-child(odd) { transform: rotate(-3deg) translateX(-10px); }
-    .scatter:nth-child(3n) { transform: rotate(1deg) scale(0.98); }
+    /* The "Scattered" Layout */
+    .scatter:nth-child(even) { transform: rotate(5deg) translateX(15px); }
+    .scatter:nth-child(odd) { transform: rotate(-4deg) translateX(-15px); }
     
-    /* Make videos sit straight for better playback */
     video { border-radius: 15px; width: 95%; transform: rotate(0deg) !important; }
 
     .footer { 
         margin: 60px 0; 
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 20px;
         text-align: center; 
-        font-style: italic;
-        color: #388e3c;
     }
 </style>
+
