@@ -63,7 +63,31 @@
         margin: 30px 0;
         display: block;
     }
+#musicBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: rgba(165, 214, 167, 0.8); /* Soft Green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
     /* Scattered Effect */
     .scatter:nth-child(even) { transform: rotate(4deg) translateX(10px); width: 75%; }
     .scatter:nth-child(odd) { transform: rotate(-3deg) translateX(-10px); width: 80%; }
@@ -74,12 +98,14 @@
 </style>
 </head>
 <body>
-
+<audio id="mySong" loop>
+    <source src="music.mp3" type="audio/mp3">
+</audio>
     <div class="container">
         <div class="header-text">
             <h1>Happy Birthday Siwon! ❤️</h1>
         </div>
-
+<div id="musicBtn" onclick="toggleMusic()">🎵</div>
         <div class="letter-box">
             Hey lovely girl, happiest 23rd birthday, now again we have only 1 year of age gap between us: it feels good haha. I hope this year is the best year you ever had and same for the upcoming years. I kind of don't like the fact that for the 2nd time we cannot celebrate your birthday together :/. I hope your first b'day that we spend together is a blast. You have already achieved a lot in your life in a small age and have kept a such a beautiful soul in you. You already are on the right path and you have such an energy that you help me in million ways to do better in my life too. I hope your energy increases even more so that along with your growth, you can positively impact more people around you. 6 bmonths seems far and I can't wait for us to meet again, I am sorry that I cannot come to you; I hope that changes soon. I miss my baby, mu dumb siwon, my chiggi ❤️. Sending a lot of hugs and kisses to your way. I hope you can feel me around and that I am with you even though I am not physically with you. For the records I do not deserve you and I need to do a lot better but I know you have a big heart and will give me time to try to be at your level in all aspects of life. JK I am the best 😎. you have started your first job recently, I am so proud of you even though it is just an internship but it's a start. I am so happy for you and so excited to see you doing the impossible in upcoming months and years, I hope you get teh job you want, earn a lot, and are able to do whatever you want in your life. I have tried to attach some pictures of your previopus year from starting of your club to outings with your friends to our meet up to video call screenshots and some of our evergreen memories. I hope you like it, I couldn't think of a better gift because you really raised the bar for my birthday that's why i will let you decide something from the options.
         </div>
@@ -137,7 +163,23 @@
             <p>To many more memories together... ❤️</p>
         </div>
     </div>
+<script>
+    var song = document.getElementById("mySong");
+    var btn = document.getElementById("musicBtn");
 
+    function toggleMusic() {
+        if (song.paused) {
+            song.play();
+            btn.innerHTML = "❤️"; // Change icon to heart when playing
+            btn.style.animation = "pulse 1.5s infinite"; // Add a pulse effect
+        } else {
+            song.pause();
+            btn.innerHTML = "🎵";
+            btn.style.animation = "none";
+        }
+    }
+</script>
 </body>
 </html>
+
 
