@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Siwon! ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    
     <style>
         body { 
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bg.jpg');
@@ -14,7 +16,7 @@
             font-family: 'Georgia', serif; 
             overflow-x: hidden; 
             color: #ffffff; 
-            line-height: 1.6; /* Better spacing for reading */
+            line-height: 1.6;
         }
 
         .container { 
@@ -32,7 +34,7 @@
 
         h1 { font-size: 2.5rem; color: #a5d6a7; margin-bottom: 10px; }
 
-        /* Style for your Letter/Paragraphs */
+        /* Updated Letter Box with Calligraphy Font */
         .letter-box {
             max-width: 90%;
             background: rgba(255, 255, 255, 0.1);
@@ -41,7 +43,13 @@
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             margin: 20px 0;
-            font-size: 1.05rem;
+            
+            /* Calligraphy Settings */
+            font-family: 'Pinyon Script', cursive; 
+            font-size: 1.6rem; /* Script fonts need to be larger to be readable */
+            line-height: 1.4;
+            letter-spacing: 1px;
+            
             text-align: left;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
@@ -55,7 +63,6 @@
             display: block;
         }
 
-        /* Scattered Effect */
         .scatter:nth-child(even) { transform: rotate(4deg) translateX(10px); width: 75%; }
         .scatter:nth-child(odd) { transform: rotate(-3deg) translateX(-10px); width: 80%; }
         
