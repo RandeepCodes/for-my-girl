@@ -1,98 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday! ❤️</title>
-    <style>
-        /* Aesthetic Background & Fonts */
-        body { 
-            background-color: #f1f8e9; /* Soft Sage Green */
-            background-image: url('https://www.transparenttextures.com/patterns/floral-paper.png'); /* Subtle Floral Texture */
-            margin: 0; 
-            font-family: 'Georgia', serif; 
-            overflow-x: hidden; 
-            color: #2e7d32; /* Deep Green Text */
-        }
+<style>
+    /* Elegant Sage Green Gradient */
+    body { 
+        background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%); 
+        background-attachment: fixed;
+        margin: 0; 
+        font-family: 'Georgia', serif; 
+        overflow-x: hidden; 
+        color: #2e7d32; 
+    }
 
-        .container { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            padding: 20px; 
-        }
+    /* Adding subtle "Green Flowers" via CSS shapes */
+    body::before {
+        content: "🌸 🌿 🌸 🌿";
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 2rem;
+        opacity: 0.3;
+        z-index: -1;
+    }
 
-        /* Birthday Header */
-        .header-text { 
-            text-align: center; 
-            margin: 60px 0;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
+    .container { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px; 
+    }
 
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    /* Birthday Header - Glassmorphism style */
+    .header-text { 
+        text-align: center; 
+        margin: 40px 0;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.8);
+        border: 2px solid #a5d6a7;
+        border-radius: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        max-width: 80%;
+    }
 
-        /* Media Styling (Videos & Photos) */
-        video, img { 
-            max-width: 85%; 
-            border: 10px solid white; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
-            margin: 30px 0;
-            display: block;
-        }
+    h1 { 
+        font-size: 2.2rem; 
+        margin-bottom: 10px; 
+        color: #1b5e20;
+        letter-spacing: 1px;
+    }
 
-        /* The "Scattered Sand" Scrapbook Effect */
-        .scatter:nth-child(even) { transform: rotate(4deg) translateX(15px); width: 75%; }
-        .scatter:nth-child(odd) { transform: rotate(-3deg) translateX(-15px); width: 80%; }
-        .scatter:nth-child(3n) { transform: rotate(1deg) scale(0.95); width: 70%; }
-        .scatter:nth-child(5n) { transform: rotate(-6deg) translateX(25px); width: 85%; }
+    /* Media Styling */
+    video, img { 
+        max-width: 85%; 
+        border: 12px solid white; /* Thick Polarod look */
+        box-shadow: 5px 15px 25px rgba(0,0,0,0.15); 
+        margin: 25px 0;
+        display: block;
+    }
 
-        video { border-radius: 20px; width: 90%; transform: rotate(0deg) !important; }
+    /* The "Scattered Sand" Scrapbook Effect */
+    .scatter:nth-child(even) { transform: rotate(4deg) translateX(10px); }
+    .scatter:nth-child(odd) { transform: rotate(-3deg) translateX(-10px); }
+    .scatter:nth-child(3n) { transform: rotate(1deg) scale(0.98); }
+    
+    /* Make videos sit straight for better playback */
+    video { border-radius: 15px; width: 95%; transform: rotate(0deg) !important; }
 
-        .footer { margin: 80px 0; text-align: center; font-size: 1.5rem; }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <div class="header-text">
-            <h1>Happy Birthday! 🌸</h1>
-            <p>Scroll down to see our favorite moments...</p>
-        </div>
-
-        <video playsinline autoplay muted loop controls>
-            <source src="start.mp4" type="video/mp4">
-        </video>
-
-        <img src="1.jpg" class="scatter"> <img src="2.jpg" class="scatter">
-        <img src="3.jpg" class="scatter"> <img src="4.jpg" class="scatter">
-        <img src="5.jpg" class="scatter"> <img src="6.jpg" class="scatter">
-        <img src="7.jpg" class="scatter"> <img src="8.jpg" class="scatter">
-        <img src="9.jpg" class="scatter"> <img src="10.jpg" class="scatter">
-        <img src="11.jpg" class="scatter"> <img src="12.jpg" class="scatter">
-        <img src="13.jpg" class="scatter"> <img src="14.jpg" class="scatter">
-        <img src="15.jpg" class="scatter"> <img src="16.jpg" class="scatter">
-        <img src="17.jpg" class="scatter"> <img src="18.jpg" class="scatter">
-        <img src="19.jpg" class="scatter"> <img src="20.jpg" class="scatter">
-        <img src="21.jpg" class="scatter"> <img src="22.jpg" class="scatter">
-        <img src="23.jpg" class="scatter"> <img src="24.jpg" class="scatter">
-        <img src="25.jpg" class="scatter"> <img src="26.jpg" class="scatter">
-        <img src="27.jpg" class="scatter"> <img src="28.jpg" class="scatter">
-        <img src="29.jpg" class="scatter"> <img src="30.jpg" class="scatter">
-        <img src="31.jpg" class="scatter"> <img src="32.jpg" class="scatter">
-        <img src="33.jpg" class="scatter"> <img src="34.jpg" class="scatter">
-        <img src="35.jpg" class="scatter"> <img src="36.jpg" class="scatter">
-
-        <video playsinline autoplay muted loop controls>
-            <source src="end.mp4" type="video/mp4">
-        </video>
-
-        <div class="footer">
-            <p>To many more memories together... ❤️</p>
-        </div>
-    </div>
-
-</body>
-</html>
+    .footer { 
+        margin: 60px 0; 
+        text-align: center; 
+        font-style: italic;
+        color: #388e3c;
+    }
+</style>
