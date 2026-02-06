@@ -3,23 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
+    <title>For You ❤️</title>
     <style>
-        body { font-family: 'Arial', sans-serif; text-align: center; background: #fff0f5; color: #d02090; padding: 50px 20px; }
-        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        p { font-size: 1.2rem; line-height: 1.6; }
-        .btn { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #ff69b4; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
-        .balloons { font-size: 50px; }
+        body { background: #fff5f7; margin: 0; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
+        .container { display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        
+        video, img { 
+            max-width: 85%; 
+            border: 8px solid white; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            margin: 40px 0;
+            transition: transform 0.3s;
+        }
+
+        /* The "Scattered" Effect */
+        img:nth-child(even) { transform: rotate(3deg) translateX(10px); width: 70%; }
+        img:nth-child(odd) { transform: rotate(-3deg) translateX(-10px); width: 75%; }
+        img:nth-child(3n) { transform: rotate(1deg) scale(0.9); }
+        img:nth-child(5n) { transform: rotate(-5deg) translateX(20px); width: 80%; }
+
+        .header-text { text-align: center; color: #d02090; margin-top: 50px; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="balloons">🎈🎁🎂</div>
-        <h1>Happy Birthday!</h1>
-        <p>To the most amazing person... I made this little corner of the internet just for you.</p>
-        <p>Hope your day is as bright as your smile!</p>
-        <a href="#" class="btn">Click for a Surprise!</a>
+
+    <div class="container">
+        <div class="header-text">
+            <h1>Happy Birthday! 🎂</h1>
+            <p>Scroll down for a trip through our memories...</p>
+        </div>
+
+        <video autoplay muted loop playsinline><source src="start.mp4" type="video/mp4"></video>
+
+        <img src="1.jpg"> <img src="2.jpg"> <img src="3.jpg"> <img src="4.jpg"> <img src="5.jpg">
+        <img src="6.jpg"> <img src="7.jpg"> <img src="8.jpg"> <img src="9.jpg"> <img src="10.jpg">
+        <img src="11.jpg"> <img src="12.jpg"> <img src="13.jpg"> <img src="14.jpg"> <img src="15.jpg">
+        <img src="16.jpg"> <img src="17.jpg"> <img src="18.jpg"> <img src="19.jpg"> <img src="20.jpg">
+        <img src="21.jpg"> <img src="22.jpg"> <img src="23.jpg"> <img src="24.jpg"> <img src="25.jpg">
+        <img src="26.jpg"> <img src="27.jpg"> <img src="28.jpg"> <img src="29.jpg"> <img src="30.jpg">
+        <img src="31.jpg"> <img src="32.jpg"> <img src="33.jpg"> <img src="34.jpg"> <img src="35.jpg">
+
+        <video autoplay muted loop playsinline><source src="end.mp4" type="video/mp4"></video>
+
+        <div class="header-text">
+            <h2>I Love You! ❤️</h2>
+        </div>
     </div>
+
 </body>
 </html>
